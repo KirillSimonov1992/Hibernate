@@ -20,7 +20,7 @@ public class Util {
                 .setProperty("hibernate.connection.pool_size", "2")
                 .setProperty("hibernate.dialect", "org.hibernate.dialect.MySQLDialect")
                 .setProperty("hibernate.show_sql","true")
-                .setProperty("hibernate.current_session_context_class", "thread")
+                .setProperty("hibernate.connection.autocommit", "false")
                 .addAnnotatedClass(User.class);
         ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
                 .applySettings(configuration.getProperties())
